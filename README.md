@@ -1,6 +1,6 @@
-# github-api-graphql
+# Testing Github GraphQL API
 
-To run this application you should add your Git Hub token in config file and after this, just run:
+To run this application you should add your Github token in config file and after this, just run:
 
 ```
 yarn
