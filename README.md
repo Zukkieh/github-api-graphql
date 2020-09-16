@@ -1,12 +1,12 @@
 # Testing Github GraphQL API
 
-To run this application you should add your Github token in config file and after this, just run:
+To run this application you should add your Github token in config file, now just run thins command in console to install all dependencies:
 
 ```
 yarn
 ```
 
-and after:
+then, run this command in console to run the application:
 
 ```
 js yarn start
