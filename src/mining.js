@@ -6,7 +6,7 @@ let count = 0;
 let after = null;
 
 module.exports = async () => {
-    while(count < 10){
+    while(count < 100){
         try {
             const res = await runQuery(after)
             count++
@@ -14,7 +14,7 @@ module.exports = async () => {
             await runExportation(formatToCsv(res.search.nodes))
         }
         catch (error) {
-            console.warn(error, 'ERRO: Trying to run the query again...')
+            console.warn('ERROR: Trying to run the query again...')
         }
     }
 }

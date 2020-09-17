@@ -2,7 +2,7 @@ const github = require('./config');
 module.exports = async (after) => {
     const res = await github.query(`
         query {
-            search(type: REPOSITORY, query: "stars:>1000", first: 100, after: ${after}) {
+            search(type: REPOSITORY, query: "stars:>1000", first: 10, after: ${after}) {
             repositoryCount
             pageInfo{
                 endCursor
@@ -18,7 +18,7 @@ module.exports = async (after) => {
                 releases {
                     totalCount
                 }
-                pullRequests: pullRequests {
+                pullRequests: pullRequests(states: MERGED) {
                     totalCount
                 }
                 closedIssues: issues(states: CLOSED) {
@@ -31,6 +31,6 @@ module.exports = async (after) => {
             }
             }
         }  
-    `).catch(error => console.log(error))
+    `)
     return res;
 };
