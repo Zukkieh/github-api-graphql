@@ -9,5 +9,5 @@ yarn
 then, run this command in console to run the application:
 
 ```
-js yarn start
+yarn start
 ```
